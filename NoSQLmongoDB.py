@@ -14,4 +14,20 @@ data = {
 
 database = client['myinfo']
 collection = database["Prad"]
-collection.insert_one(data)
+#collection.insert_one(data)
+
+list_of_records = [
+    {'companyName': 'iNeuron',
+     'product': 'Affordable AI',
+     'courseOffered': 'Machine Learning with Deployment'},
+
+    {'companyName': 'iNeuron',
+     'product': 'Affordable AI',
+     'courseOffered': 'Deep Learning for NLP and Computer vision'},
+
+    {'companyName': 'iNeuron',
+     'product': 'Master Program',
+     'courseOffered': 'Data Science Masters Program'}
+]
+
+collection.insert_many(list_of_records)
