@@ -11,3 +11,7 @@ data = {
     "email" : "imailpradeep1@gmail.com",
     "subject" : ["data science", "big data", "data analytics"]
 }
+
+database = client['myinfo']
+collection = database["Prad"]
+collection.insert_one(data)
