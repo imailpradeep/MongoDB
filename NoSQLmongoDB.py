@@ -37,3 +37,7 @@ collection.insert_one(data1)
 collection1 = database["saggf"]
 data2 = {"sfdg":"asgf",'3':'4'}
 collection1.insert_one(data2)
+
+record = collection.find()
+for i in record:
+    print(i)
