@@ -1,6 +1,6 @@
 import pymongo
 
-client = pymongo.MongoClient("mongodb+srv://ineuron:ineuron1@cluster0.goi2j.mongodb.net/?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://imailpradeep:ammaacha@cluster0.gujy4jv.mongodb.net/?retryWrites=true&w=majority")
 db = client.test
 
 data =  [
@@ -69,3 +69,25 @@ data =  [
 database = client['inventory']
 collection = database["table"]
 collection.insert_many(data)
+
+#d = collection.find()
+#d = collection.find({'status' : 'A'})
+#d = collection.find({'status' : {'$in':['A','P']}})
+#d = collection.find({'status':{'$gt' : 'C'}})
+#d = collection.find({'qty':100})
+#d = collection.find({'qty': {'$gte' : 75}})
+#d = collection.find({'qty': {'$lte' : 75}})
+#d = collection.find({'qty': {'$gt' : 75}})
+#d = collection.find({'item' :'sketch pad', 'qty' : 95})
+#d = collection.find({'item' :'sketch pad', 'qty' : {'$gte' : 75}})
+
+#d = collection.find({'$or': [{'item' : 'sketch pad'}, {'qty': {'$gte': 75}}]})
+
+#collection.update_one({'item':'canvas'}, {'$set':{'item':'Pradeep'}})
+
+#collection.delete_one({'item':'Pradeep'})
+d= collection.find({'item':'Pradeep'})
+for i in d:
+    print(i)
+
+
